@@ -1,14 +1,14 @@
 import axios from "axios";
 
-
+//  Proxy setup 
 const api = axios.create({
-    baseURL: "https://events.deepanwita.fun/",
+    baseURL: "/api/",
     headers: {
         "Content-Type": "application/json",
     },
 });
 
-
+// Auth token attach interceptor
 api.interceptors.request.use((config) => {
     const token = localStorage.getItem("token");
     if (token && !config.headers.Authorization) {
@@ -17,6 +17,7 @@ api.interceptors.request.use((config) => {
     return config;
 });
 
+// API FUNCTIONS 
 
 export const fetchAllEvents = async () => {
     try {
@@ -49,7 +50,6 @@ export const fetchSingleEvent = async (id) => {
     }
 };
 
-
 export const fetchCategories = async () => {
     try {
         const res = await api.get("category/api_all_category/");
@@ -61,7 +61,6 @@ export const fetchCategories = async () => {
         return [];
     }
 };
-
 
 export const fetchEventTiers = async (eventTitle) => {
     try {
@@ -75,23 +74,16 @@ export const fetchEventTiers = async (eventTitle) => {
     }
 };
 
-
 export const bookEventTicket = async (token, payload) => {
     try {
-
-        const headers = token
-            ? { Authorization: `Bearer ${token}` }
-            : {};
-        const res = await api.post("booking/api_booking/route/", payload, {
-            headers,
-        });
+        const headers = token ? { Authorization: `Bearer ${token}` } : {};
+        const res = await api.post("booking/api_booking/route/", payload, { headers });
         return res.data;
     } catch (err) {
         console.error("Error booking event ticket:", err.response?.data || err);
         throw err;
     }
 };
-
 
 export const loginUser = async (email, password) => {
     try {
