@@ -1,0 +1,13 @@
+.booking-card {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 12px;
+    color: #e0f7fa;
+    max-width: 500px;
+    margin: auto;
+}
+
+.booking-card h3 {
+    color: #00e6e6;
+    font-weight: 600;
+}

@@ -1,0 +1,118 @@
+/* General Section Title */
+.section-title {
+    color: #00e6e6;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-left: 4px solid #00e6e6;
+    padding-left: 10px;
+}
+
+/* Horizontal Scroll */
+.scroll-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.scroll-row::-webkit-scrollbar {
+    display: none;
+}
+
+/* Event Card (Popular) */
+.event-card {
+    position: relative;
+    min-width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #00e6e6;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Category Card */
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    flex-shrink: 0;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-name {
+    color: #00e6e6;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+/* All Events */
+.event-box {
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(10, 10, 10, 0.95));
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.event-box:hover {
+    transform: scale(1.03);
+}
+
+.event-box-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-box-body {
+    padding: 15px;
+}
+
+.event-box-title {
+    color: #00e6e6;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

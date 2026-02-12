@@ -1,0 +1,93 @@
+/* Wrapper background */
+.profile-wrapper {
+    background-color: #000;
+    background-image: radial-gradient(circle at 20% 20%, #0f0f0f, #000);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #eaeaea;
+}
+
+/* Loader */
+.profile-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+/* Error message */
+.profile-error {
+    text-align: center;
+    margin-top: 50px;
+    color: red;
+    background-color: #000;
+    padding: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+    max-width: 420px;
+    width: 90%;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.85), rgba(10, 10, 10, 0.9));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Username badge */
+.profile-badge {
+    width: 90px;
+    height: 90px;
+    font-size: 38px;
+    color: #0ff;
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    text-shadow: 0 0 8px #0ff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: -60px auto 15px auto;
+}
+
+/* Username */
+.profile-username {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #0ff;
+    font-weight: bold;
+}
+
+/* Email */
+.profile-email {
+    color: #aaa;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Divider */
+.profile-card hr {
+    border-color: rgba(0, 255, 255, 0.2);
+    margin: 15px 0;
+}
+
+/* Profile details */
+.profile-details p {
+    margin: 8px 0;
+}
+
+.profile-details strong {
+    color: #0ff;
+}
+
+.profile-details span {
+    color: #e0f7fa;
+}

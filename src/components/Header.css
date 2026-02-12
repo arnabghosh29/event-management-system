@@ -1,0 +1,106 @@
+/* Navbar wrapper */
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
+    /* blue shade */
+}
+
+/* Nav links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* Book Button */
+.book-btn {
+    background: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.book-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Mobile Menu Toggle (hidden on desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile nav */
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    padding: 16px;
+    gap: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.mobile-nav a:hover {
+    color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* hide desktop menu */
+    }
+
+    .book-btn {
+        display: none;
+        /* hide desktop button */
+    }
+
+    .menu-toggle {
+        display: block;
+        /* show mobile toggle */
+    }
+}
